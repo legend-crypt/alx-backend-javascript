@@ -20,7 +20,7 @@ const countStudents = async (fileName) => {
     }
 
     // Log the results
-    process.stdout.write(`Number of Students: ${total_students} \n`);
+    process.stdout.write(`Number of students: ${total_students} \n`);
     for (const [key, value] of Object.entries(all_records)) {
       process.stdout.write(
         `Number of students in ${key}: ${value.length}. List: ${value.join(

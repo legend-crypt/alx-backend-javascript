@@ -26,7 +26,7 @@ const app = createServer(async (req, res) => {
       }
       break;
     case '/':
-      res.end('Hello Holberton School!');
+      res.end('Hello Holberton School! \n');
       break;
   }
 });
