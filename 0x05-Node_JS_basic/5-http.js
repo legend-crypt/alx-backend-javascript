@@ -26,10 +26,15 @@ const app = createServer(async (req, res) => {
       }
       break;
     case '/':
-      res.end('Hello Holberton School! \n');
+      res.end('Hello Holberton School!');
       break;
   }
 });
 
-app.listen(port, hostname);
+if (require.main === module) {
+  app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+  });
+}
+
 module.exports = app;
